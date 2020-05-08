@@ -312,7 +312,17 @@ export default class ViewPager extends PureComponent {
 
         return (
             <View
-              {...this.props}
+              //{...this.props}
+              onResponderGrant={this.props.onResponderGrant}
+              onResponderEnd={this.props.onResponderEnd}
+              onResponderMove={this.props.onResponderMove}
+              onResponderReject={this.props.onResponderReject}
+              onResponderRelease={this.props.onResponderRelease}
+              onResponderStart={this.props.onResponderStart}
+              onResponderTerminate={this.props.onResponderTerminate}
+              onResponderTerminationRequest={this.props.onResponderTerminationRequest}
+              onSingleTapConfirmed={this.props.onSingleTapConfirmed}
+              onStartShouldSetResponderCapture={this.props.onStartShouldSetResponderCapture}
               style={[style, { flex: 1 }]}
               {...gestureResponder}>
                 <FlatList
